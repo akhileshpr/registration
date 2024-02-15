@@ -8,7 +8,7 @@ const regServer=express()
 regServer.use(cors())
 regServer.use(express.json())  //application specific middleware
 regServer.use(router)
-const PORT=3001
+const PORT=3001 || process.env.PORT
 regServer.listen(PORT,()=>{
     console.log(`server run at port ${PORT}`);
 })
